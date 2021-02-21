@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{ margin:0; padding:0; box-sizing:border-box; }
+      li{ list-style:none;}
+      a{ text-decoration:none; }
+      img {border:0; width:100;}
+
+      #main_header{ position:relative; width:960px; margin:0 auto;
+                border:1px solid black;}
+      #content{ width:960px; margin:10px auto 10px auto;
+                overflow:hidden;
+                border:1px solid red;}
+      footer{ width:960px; margin:0 auto;
+                border:1px solid black;}
+
+
+      #main_section {float:left; width:60%; border:1px solid black;}
+      #main_section > article {border:1px solid gray;}
+      #main_section > article:nth-of-type(2){background:yellow;}
+
+
+
+
+
+      #main_aside {float:right; width:38%;border:1px solid black;}
+
+      input ~ div {display:none;} /* input과 형제관계의 div 모두 안보이게 */
+      input:nth-of-type(1):checked ~ div:nth-of-type(1) { display:block;}
+      input:nth-of-type(2):checked ~ div:nth-of-type(2) { display:block;}
+
+
+      li {overflow:hidden; }
+      .thumbnail { float:left; width:50%; border:2px solid yellow;}
+      .txt {float:right; width:49%; border:2px solid yellow;}
+
+
+      #title {margin-left:5px}
+      #gnb { position:absolute; top:0; right:0; margin:1px}
+      #lnb { position:absolute; bottom:0; right:0; margin:1px}
+
+      nav > ul { overflow:hidden}
+      nav > ul > li { float:left; border:1px solid black; }
+      nav> ul > li > a {  display:block;}
+
+      #gnb >  ul > li > a {  padding:2px 10px;font-size:11px;}
+      #lnb >  ul > li > a {  padding:5px 10px;font-size:15px;}
+
+
+      article > .product_list { margin:5px 0; }
+      article > .product_list > ul {	overflow: hidden }
+      article > .product_list > ul > li{ float:left;width:181px; margin:0 4px; border:1px solid gray; }
+      article > .product_list  > dt { padding:5px 5px; text-align: center; }
+      article > .product_list  > dd {  border:1px solid gray; padding:5px 5px; text-align: center;}
+
+      #flex_list { display:flex;
+      justify-content:space-around;}
+      #flex_list .item_list { background: red;
+                            margin:5px}
+
+
+      .item_contain{  display:flex; }
+
+    </style>
+  </head>
+  <body>
+    <header id="main_header">
+      <div id="title">
+        <h1>AGENCY</h1>
+        <h2>KOR</h2>
+      </div>
+      <nav id ="gnb">
+          <ul>
+            <li><a href="">LOGIN</a></li>
+            <li><a href="">SITEMAP</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">FAQ</a></li>
+          </ul>
+      </nav>
+      <nav id ="lnb">
+          <ul>
+            <li><a href="">NEWS</a></li>
+            <li><a href="">BEST></a></li>
+            <li><a href="">Q&A</a></li>
+            <li><a href="">FAQ</a></li>
+          </ul>
+      </nav>
+    </header>
+    <div id="content">
+      <section id="main_section">
+        <article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus mi ipsum, ultrices euismod ex posuere a. Fusce quis tristique odio. Aenean pharetra arcu vel pretium lobortis. Quisque eget tempus sapien. Etiam bibendum turpis sit amet aliquam condimentum. Mauris vitae orci libero. Donec tempor congue laoreet. Vestibulum in cursus magna. In ultrices, ligula ut ultricies eleifend, tortor est porttitor ante, sed tincidunt nisl risus non orci. Maecenas nunc tortor, venenatis eget magna a, mollis luctus eros. Nam facilisis nisi elit, non scelerisque mauris ultrices sit amet. Integer fringilla pulvinar pellentesque. Nunc hendrerit semper massa a condimentum. Ut venenatis arcu dapibus suscipit aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam lacinia eros eget sagittis suscipit.
+          <br>
+          </p>
+        </article>
+        <article>
+          <div class="product_list">
+            <ul>
+              <li><a href="#">
+                <div class="item_list">
+                  <img src="1.png" alt="">
+                  <dl>
+                    <dt>11111</dt>
+                    <dd>11111</dd>
+                  </dl>
+                </div>
+              </a></li>
+              <li><a href="#">
+                <div class="item_list">
+                  <img src="1.png" alt="">
+                  <dl>
+                    <dt>2222</dt>
+                    <dd>112222111</dd>
+                  </dl>
+                </div>
+              </a></li>
+              <li><a href="#">
+                <div class="item_list">
+                  <img src="1.png" alt="">
+                  <dl>
+                    <dt>3333</dt>
+                    <dd>111333311</dd>
+                  </dl>
+                </div>
+              </a></li>
+            </ul>
+          </div>
+
+        </article>
+        <article>
+          <div id ="flex_list">
+
+              <div><a href="#">
+                <div class="item_list">
+                  <img src="1.png" alt="">
+                  <dl>
+                    <dt>11111</dt>
+                    <dd>11111</dd>
+                  </dl>
+                </div>
+              </a></div>
+              <div><a href="#">
+                <div class="item_list">
+                  <img src="1.png" alt="">
+                  <dl>
+                    <dt>2222</dt>
+                    <dd>112222111</dd>
+                  </dl>
+                </div>
+              </a></div>
+              <div><a href="#">
+                <div class="item_list">
+                  <img src="1.png" alt="">
+                  <dl>
+                    <dt>3333</dt>
+                    <dd>111333311</dd>
+                  </dl>
+                </div>
+              </a></div>
+
+          </div>
+        </article>
+      </section>
+      <aside id="main_aside">
+        <input type="radio" name="tab" id="tab1" checked>
+        <input type="radio" name="tab" id="tab2">
+
+
+          <label for ="tab1">menu1</label>
+          <label for ="tab2">menu2</label>
+
+
+        <div class="tab_item">
+
+          <div class ="item_contain"<a href="#">
+            <div class="thumbnail">
+              <img src="../33_layout/img/1.png" alt="">
+            </div>
+            <div class="txt">
+              <p>java script excercise</p>
+              <p>2021-02-17</p>
+            </div></a>
+          </div>
+
+            <div class ="item_contain"<a href="#">
+              <div class="thumbnail">
+                <img src="../33_layout/img/apple.png" alt="">
+              </div>
+              <div class="txt">
+                <p>java script excercise</p>
+                <p>2021-02-17</p>
+              </div></a>
+            </div>
+
+            <div class ="item_contain"<a href="#">
+              <div class="thumbnail">
+                <img src="../33_layout/img/apple.png" alt="">
+              </div>
+              <div class="txt">
+                <p>java script excercise</p>
+                <p>2021-02-17</p>
+              </div></a>
+            </div>
+
+        </div>
+
+        <div class="tab_item">
+          <ul>
+            <li><a href="#">
+              <div class="thumbnail">
+                <img src="../33_layout/img/bg-img3.png" alt="">
+              </div>
+              <div class="txt">
+                <p>222-excercise</p>
+                <p>2021-02-17</p>
+              </div></a>
+            </li>
+            <li><a href="#">
+              <div class="thumbnail">
+                <img src="../33_layout/img/apple.png" alt="">
+              </div>
+              <div class="txt">
+                <p>java script excercise</p>
+                <p>2021-02-17</p>
+              </div></a>
+            </li>
+            <li><a href="#">
+              <div class="thumbnail">
+                <img src="../33_layout/img/1.png" alt="">
+              </div>
+              <div class="txt">
+                <p>java script </p>
+                <p>2021-02-17</p>
+              </div></a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+    <footer>
+      <address>java script excercise</address>
+    </footer>
+  </body>
+</html>
